@@ -1,0 +1,49 @@
+Week 6 eval | 31 cases (9 regression, replayed verbatim from failed Week-5 traces) | answers hr-rag-v2 @ 2026-10-08T13:42:12+00:00
+Judge: not run (--no-judge)
+Criteria: 5 deterministic assertions (4 moved out of the judge) vs 1 judged criterion (policy_correct)
+
+mode  failure probed                       n   assertions        judge  PASS (both)
+M1    superseded 2023 figure               8     4/8  50%            -            -
+M2    office never named / not covered     8     3/8  38%            -            -
+M3    unsupported reassurance              5     2/5  40%            -            -
+M4    dead-end refusal                     5     5/5 100%            -            -
+M5    refuses though answer exists         5     3/5  60%            -            -
+ALL   (read the mode rows, not this one)  31   17/31  55%            -            -
+
+Per assertion (applies / passes):
+  section_ref_resolves     13/24  [moved from judge]
+  version_cited_current    11/24  [moved from judge]
+  notice_figure_numeric     0/4   [moved from judge]
+  refusal_path              2/2   [moved from judge]
+  no_superseded_figure      7/8   [new]
+
+Failing cases:
+  C01 M1  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+  C02 M1  version_cited_current: HR-WORK-004 is superseded
+            no_superseded_figure: 2023-only figure(s): ['INR 1,000', 'GBP 15', 'USD 20']
+  C05 M1  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+  C08 M1  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+  C10 M2  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+            notice_figure_numeric: no numeric notice figure
+  C11 M2  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+            notice_figure_numeric: no numeric notice figure
+  C12 M2  notice_figure_numeric: no numeric notice figure
+  C15 M2  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+  C16 M2  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+  C17 M3  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+  C18 M3  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+  C19 M3  version_cited_current: HR-LEAVE-001 is superseded
+  C27 M5  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+  C28 M5  section_ref_resolves: no [POLICY_ID §SECTION, ...] citation
+            version_cited_current: no citation, so no version cited
+            notice_figure_numeric: no numeric notice figure

@@ -1,0 +1,516 @@
+{
+  "meta": {
+    "generated_at": "2026-10-08T13:42:12+00:00",
+    "prompt_version": "hr-rag-v2",
+    "model": "openai/gpt-oss-20b",
+    "params": {
+      "temperature": 0.0,
+      "max_tokens": 700,
+      "top_p": 1.0,
+      "seed": 7
+    },
+    "retrieval_mode": "hybrid",
+    "dense_backend": "pinecone",
+    "chunk_store_fingerprint": "80-780c5a69d018",
+    "trace_log": "traces/eval_traces.jsonl",
+    "n": 31
+  },
+  "answers": {
+    "C01": {
+      "question": "Hi team, I hope you are doing well. I wanted to understand the process for applying for maternity leave, including how much advance notice I should give and what documents are required. I am based in London. Thank you so much for your help.",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_aff1b730ef1a",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "parental-leave-in-2023_chunk_0",
+        "parental-leave-uk-2025_chunk_0",
+        "parental-leave-in-2023_chunk_1"
+      ],
+      "contexts": [
+        "# Northwind Systems - Maternity and Paternity Leave Policy (India) page_id: parental-leave-in-2023 policy_id: HR-LEAVE-009-IN effective_date: 2023-04-01 supersedes: none status: superseded region: IN page_type: policy ## 1. Scope Applies to employees on the India payroll based at the Chennai office, including those working remotely within India. Employees on the UK or US payroll are covered by the policy for their own region. ## 2. Entitlement | Leave type | Paid duration | Eligibility service at expected date | Notice to employer | |---|---|---|---| | Maternity leave (first two children) |",
+        "# Northwind Systems - Parental Leave Policy (United Kingdom) page_id: parental-leave-uk-2025 policy_id: HR-LEAVE-011-UK effective_date: 2025-04-01 supersedes: none status: active region: UK page_type: policy ## 1. Scope Applies to employees on the UK payroll based at the London office. The entitlements below are enhanced above statutory minimums and are not transferable to the Chennai or Austin offices. ## 2. Entitlement | Leave type | Full pay | Then half pay | Then statutory or unpaid | Total available | |---|---|---|---|---| | Maternity leave | 18 weeks | 8 weeks | 26 weeks | 52 weeks | |",
+        "| Eligibility service at expected date | Notice to employer | |---|---|---|---| | Maternity leave (first two children) | 26 weeks | 80 days worked in preceding 12 months | 10 weeks | | Maternity leave (third child onward) | 12 weeks | 80 days worked in preceding 12 months | 10 weeks | | Paternity leave | 5 working days | 6 months | 6 weeks | | Adoption leave (primary carer, child under 3 months) | 12 weeks | 12 months | 6 weeks | | Surrogacy (commissioning parent) | not covered | not applicable | not applicable | | Pregnancy loss or termination | 6 weeks | none | not applicable | Maternity"
+      ]
+    },
+    "C02": {
+      "question": "Reimbursement for internet and home office setup, is there a monthly allowance?",
+      "answer": "Yes. Northwind provides a monthly allowance for internet usage and a one‑time reimbursement for a home‑office set‑up.\n\n* **Internet allowance** – Employees receive a monthly stipend: INR 1,500 / GBP 25 / USD 35 per month [HR-WORK-007 §4, effective 2025‑04‑01] and, for fully remote employees, INR 1,000 / GBP 15 / USD 20 per month [HR-WORK-004 §4, effective 2023‑04‑01].\n\n* **Home‑office set‑up** – A one‑time reimbursement is available: ",
+      "trace_id": "tr_99347d26d7ba",
+      "finish_reason": "length",
+      "chunk_ids": [
+        "hybrid-working-2025_chunk_3",
+        "remote-working-2023_chunk_3",
+        "parental-leave-in-2025_chunk_3"
+      ],
+      "contexts": [
+        "Expense Policy. ## 4. Home office support | Item | Amount | Frequency | Eligibility | |---|---|---|---| | One-time home office setup | INR 25,000 / GBP 350 / USD 450 | once per employment | after confirmation | | Internet allowance | INR 1,500 / GBP 25 / USD 35 | per month | all employees | | Monitor or chair refresh | 60 percent of cost, capped | once every 3 years | fully remote only | ## 5. Procedure for ad hoc work from home 1. Inform your reporting manager by the end of the previous working day. 2. Mark the day in the team calendar as WFH. 3. Remain reachable during your team's core",
+        "gibility | |---|---|---|---| | One-time home office setup | INR 15,000 / GBP 200 / USD 250 | once per employment | after confirmation | | Internet allowance | INR 1,000 / GBP 15 / USD 20 | per month | fully remote only | | Monitor or chair refresh | 50 percent of cost, capped | once every 4 years | fully remote only | ## 5. Procedure for ad hoc work from home 1. Inform your reporting manager by the start of the working day. 2. Mark the day in the team calendar as WFH. 3. Remain reachable during your team's core hours. 4. Ad hoc work from home beyond 10 days in a calendar month requires",
+        "fter their return date, by agreement with the reporting manager. This overrides the office attendance expectation in the Hybrid Working Policy for that period. ## 4. Creche and nursing The Chennai office provides a nursing room on the third floor. A creche reimbursement of INR 8,000 per month per child is available until the child turns 6, claimed through the monthly expense process. ## 5. Procedure 1. Notify your reporting manager and the People Ops partner in writing, giving the expected date and the planned leave start date. 2. Submit Form PL-IN with your employee ID in the format"
+      ]
+    },
+    "C03": {
+      "question": "How many days of annual leave can I carry forward into next year? I'm an L2 engineer in Chennai.",
+      "answer": "You can carry forward up to **10 days** of annual leave into the next year.  \n[HR-LEAVE-002 §3, effective 2025‑04‑01]",
+      "trace_id": "tr_7c698090cd35",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "annual-leave-2025_chunk_1",
+        "annual-leave-2023_chunk_1",
+        "leave-attendance-faq_chunk_1"
+      ],
+      "contexts": [
+        "plies to all permanent employees across Chennai, London and Austin. Interns, contractors and agency staff are covered by separate commercial terms and are not eligible. Employees serving a notice period may take leave only with written approval from their reporting manager. ## 3. Entitlement | Grade band | Annual leave days | Max carry-over into next year | Accrual rate per month | |---|---|---|---| | L1 - L3 (Associate to Senior Engineer) | 22 | 10 | 1.83 | | L4 - L5 (Lead, Principal) | 25 | 12 | 2.08 | | L6+ (Director and above) | 28 | 12 | 2.33 | | Fixed-term (under 12 months) | 12 | 0 |",
+        "es across Chennai, London and Austin. Interns, contractors and agency staff are covered by separate commercial terms and are not eligible. Employees serving a notice period may take leave only with written approval from their reporting manager. ## 3. Entitlement | Grade band | Annual leave days | Max carry-over into next year | Accrual rate per month | |---|---|---|---| | L1 - L3 (Associate to Senior Engineer) | 18 | 5 | 1.50 | | L4 - L5 (Lead, Principal) | 21 | 7 | 1.75 | | L6+ (Director and above) | 24 | 7 | 2.00 | | Fixed-term (under 12 months) | 10 | 0 | 0.83 | Leave accrues monthly and",
+        "**How many leave days do I get?** Most employees get 20 days of annual leave a year. Leads and above get more. The exact number for your grade band is in the Annual Leave Policy table. **How much leave can I carry forward?** You can carry forward up to 10 days. Anything above that lapses at the end of the leave year. Carried days must be used by the end of the second quarter. **Do I need to apply in advance?** Yes. One week of notice is the general expectation for short absences, and a month for anything longer than a week. **Can I cash out my leave?** Only when you leave the company, and"
+      ]
+    },
+    "C04": {
+      "question": "What's the cap on leave encashment when I resign?",
+      "answer": "The cap on leave encashment at the time of separation is **15 days**.  \n[HR-LEAVE-002 §4, effective 2025-04-01]",
+      "trace_id": "tr_d148477230f3",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "annual-leave-2023_chunk_2",
+        "annual-leave-2025_chunk_2",
+        "notice-probation-uk-2025_chunk_2"
+      ],
+      "contexts": [
+        "| L6+ (Director and above) | 24 | 7 | 2.00 | | Fixed-term (under 12 months) | 10 | 0 | 0.83 | Leave accrues monthly and is credited on the last working day of each month. New joiners accrue from their date of joining, pro-rated to the nearest half day. ## 4. Carry-over and encashment Unused leave up to the carry-over cap in the table above may be carried into the next leave year. Carried leave must be consumed by 30 June or it lapses. Encashment of leave is permitted only at the time of separation and is capped at 10 days regardless of grade band. ## 5. Applying for leave 1. Raise the",
+        "d, Principal) | 25 | 12 | 2.08 | | L6+ (Director and above) | 28 | 12 | 2.33 | | Fixed-term (under 12 months) | 12 | 0 | 1.00 | Leave accrues monthly and is credited on the last working day of each month. New joiners accrue from their date of joining, pro-rated to the nearest half day. ## 4. Carry-over and encashment Unused leave up to the carry-over cap in the table above may be carried into the next leave year. Carried leave must be consumed by 30 September or it lapses. Encashment of leave is permitted only at the time of separation and is capped at 15 days regardless of grade band. ## 5.",
+        "Notice period after probation | Grade band | Employee resignation | Termination by company | Payment in lieu of notice | |---|---|---|---| | L1 - L2 | 1 month | 1 month | at company discretion | | L3 - L4 | 2 months | 2 months | at company discretion | | L5 and above | 3 months | 3 months | at company discretion | Statutory minimum notice from the company increases with service and is applied where it exceeds the contractual figure. Notice runs in calendar months from the date the resignation is received in writing. ## 4. Garden leave and restrictions The company may place a departing"
+      ]
+    },
+    "C05": {
+      "question": "Paternity leave in the Chennai office - how many days do I get and can I split it?",
+      "answer": "",
+      "trace_id": "tr_c916e61f2a2a",
+      "finish_reason": "length",
+      "chunk_ids": [
+        "parental-leave-in-2025_chunk_2",
+        "parental-leave-in-2023_chunk_2",
+        "parental-leave-in-2023_chunk_0"
+      ],
+      "contexts": [
+        "12 weeks | 6 months | 4 weeks | | Surrogacy (commissioning parent) | 12 weeks | 6 months | 4 weeks | | Pregnancy loss or termination | 6 weeks | none | not applicable | Maternity leave may begin up to 8 weeks before the expected date of delivery. Paternity leave must be taken within 6 months of the date of birth and may be split into at most two blocks. ## 3. Work from home on return Employees returning from maternity leave may work from home full time for up to 4 months after their return date, by agreement with the reporting manager. This overrides the office attendance expectation in the",
+        "overed | not applicable | not applicable | | Pregnancy loss or termination | 6 weeks | none | not applicable | Maternity leave may begin up to 8 weeks before the expected date of delivery. Paternity leave must be taken within 3 months of the date of birth and must be taken as a single block. ## 3. Work from home on return Employees returning from maternity leave may work from home full time for up to 2 months after their return date, by agreement with the reporting manager. ## 4. Creche and nursing The Chennai office provides a nursing room on the third floor. A creche reimbursement of INR",
+        "# Northwind Systems - Maternity and Paternity Leave Policy (India) page_id: parental-leave-in-2023 policy_id: HR-LEAVE-009-IN effective_date: 2023-04-01 supersedes: none status: superseded region: IN page_type: policy ## 1. Scope Applies to employees on the India payroll based at the Chennai office, including those working remotely within India. Employees on the UK or US payroll are covered by the policy for their own region. ## 2. Entitlement | Leave type | Paid duration | Eligibility service at expected date | Notice to employer | |---|---|---|---| | Maternity leave (first two children) |"
+      ]
+    },
+    "C06": {
+      "question": "What is the creche reimbursement for Chennai employees?",
+      "answer": "The creche reimbursement for Chennai employees is **INR 8,000 per month per child** until the child turns 6 years old.  \n[HR-LEAVE-011-IN §4, effective 2025-04-01]",
+      "trace_id": "tr_bbf552810bfb",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "parental-leave-in-2023_chunk_3",
+        "parental-leave-in-2023_chunk_2",
+        "parental-leave-in-2025_chunk_3"
+      ],
+      "contexts": [
+        "r. ## 4. Creche and nursing The Chennai office provides a nursing room on the third floor. A creche reimbursement of INR 5,000 per month per child is available until the child turns 4, claimed through the monthly expense process. ## 5. Procedure 1. Notify your reporting manager and the HR business partner in writing, giving the expected date and the planned leave start date. 2. Submit Form MAT-IN with your employee ID in the format EMP-##### and supporting medical documentation at least 10 weeks before the leave start date. 3. HR confirms the entitlement and the return date in writing within",
+        "overed | not applicable | not applicable | | Pregnancy loss or termination | 6 weeks | none | not applicable | Maternity leave may begin up to 8 weeks before the expected date of delivery. Paternity leave must be taken within 3 months of the date of birth and must be taken as a single block. ## 3. Work from home on return Employees returning from maternity leave may work from home full time for up to 2 months after their return date, by agreement with the reporting manager. ## 4. Creche and nursing The Chennai office provides a nursing room on the third floor. A creche reimbursement of INR",
+        "fter their return date, by agreement with the reporting manager. This overrides the office attendance expectation in the Hybrid Working Policy for that period. ## 4. Creche and nursing The Chennai office provides a nursing room on the third floor. A creche reimbursement of INR 8,000 per month per child is available until the child turns 6, claimed through the monthly expense process. ## 5. Procedure 1. Notify your reporting manager and the People Ops partner in writing, giving the expected date and the planned leave start date. 2. Submit Form PL-IN with your employee ID in the format"
+      ]
+    },
+    "C07": {
+      "question": "how many days a week do engineers need to be in office",
+      "answer": "Engineers are required to be in the office **3 days per week**.  \n[HR-WORK-007 §2 Office attendance expectation, effective 2025-04-01]",
+      "trace_id": "tr_6186ab5d344d",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "remote-working-2023_chunk_2",
+        "hybrid-working-2025_chunk_1",
+        "remote-working-2023_chunk_1"
+      ],
+      "contexts": [
+        "specific weekdays on which the whole team attends. Anchor days are published by the team lead each half year and cannot be changed with less than 1 week notice. ## 3. Fully remote arrangements A fully remote arrangement requires approval by the function head, is reviewed every 12 months, and may be withdrawn with 30 days notice. Fully remote employees must attend the office for at least 2 days per quarter. ## 4. Home office support | Item | Amount | Frequency | Eligibility | |---|---|---|---| | One-time home office setup | INR 15,000 / GBP 200 / USD 250 | once per employment | after",
+        "ctation | Role family | Minimum office days per week | Anchor days set by | Fully remote permitted | |---|---|---|---| | Engineering and QA | 3 | team lead | by exception only | | Product and Design | 3 | product head | no | | Sales and Customer Success | 2 | regional sales head | yes, for field roles | | Support (24x7 rota) | 4 | support operations manager | no | | Corporate functions (Finance, People, Legal) | 3 | function head | no | Anchor days are the specific weekdays on which the whole team attends. Anchor days are published by the team lead each quarter and cannot be changed with less",
+        "le family | Minimum office days per week | Anchor days set by | Fully remote permitted | |---|---|---|---| | Engineering and QA | 2 | team lead | yes, with function head approval | | Product and Design | 2 | product head | yes, with function head approval | | Sales and Customer Success | 1 | regional sales head | yes | | Support (24x7 rota) | 3 | support operations manager | yes | | Corporate functions (Finance, People, Legal) | 2 | function head | yes | Anchor days are the specific weekdays on which the whole team attends. Anchor days are published by the team lead each half year and cannot"
+      ]
+    },
+    "C08": {
+      "question": "carry forward limit as per the leave policy 2023?",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_6767397ea31b",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "leave-attendance-faq_chunk_1",
+        "annual-leave-2025_chunk_0",
+        "annual-leave-2023_chunk_0"
+      ],
+      "contexts": [
+        "**How many leave days do I get?** Most employees get 20 days of annual leave a year. Leads and above get more. The exact number for your grade band is in the Annual Leave Policy table. **How much leave can I carry forward?** You can carry forward up to 10 days. Anything above that lapses at the end of the leave year. Carried days must be used by the end of the second quarter. **Do I need to apply in advance?** Yes. One week of notice is the general expectation for short absences, and a month for anything longer than a week. **Can I cash out my leave?** Only when you leave the company, and",
+        "# Northwind Systems - Annual Leave Policy page_id: annual-leave-2025 policy_id: HR-LEAVE-002 effective_date: 2025-04-01 supersedes: annual-leave-2023 status: active region: ALL page_type: policy ## 1. Purpose Northwind Systems provides paid annual leave (also called earned leave in India) so that employees can rest, travel and attend to personal matters. This policy replaces the 2023 Annual Leave Policy with effect from the start of the FY2025-26 leave year. ## 2. Scope Applies to all permanent employees across Chennai, London and Austin. Interns, contractors and agency staff are covered by",
+        "# Northwind Systems - Annual Leave Policy page_id: annual-leave-2023 policy_id: HR-LEAVE-001 effective_date: 2023-04-01 supersedes: none status: superseded region: ALL page_type: policy ## 1. Purpose Northwind Systems provides paid annual leave (also called earned leave in India) so that employees can rest, travel and attend to personal matters. This policy is retained for reference for leave years up to and including FY2024-25. ## 2. Scope Applies to all permanent employees across Chennai, London and Austin. Interns, contractors and agency staff are covered by separate commercial terms and"
+      ]
+    },
+    "C09": {
+      "question": "can i extend maternity leave unpaid after the paid part ends",
+      "answer": "Yes. After the 18 weeks of full‑pay and the 8 weeks of half‑pay maternity leave, you may take up to 26 weeks of unpaid leave. This unpaid period is part of the total 52 weeks of maternity leave entitlement for employees on the UK payroll. [HR-LEAVE-011-UK §2 Entitlement, effective 2025-04-01]",
+      "trace_id": "tr_cd4e5a38eef1",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "parental-leave-uk-2025_chunk_1",
+        "parental-leave-us-2025_chunk_2",
+        "parental-leave-uk-2025_chunk_0"
+      ],
+      "contexts": [
+        "ory or unpaid | Total available | |---|---|---|---|---| | Maternity leave | 18 weeks | 8 weeks | 26 weeks | 52 weeks | | Adoption leave (primary carer) | 18 weeks | 8 weeks | 26 weeks | 52 weeks | | Paternity or secondary carer leave | 6 weeks | none | none | 6 weeks | | Shared parental leave | 12 weeks | 8 weeks | balance of 52 weeks | 50 weeks | | Unpaid parental leave (per child, to age 18) | none | none | 18 weeks | 18 weeks | | Neonatal care leave | 12 weeks | none | none | 12 weeks | Enhanced maternity and adoption pay is conditional on 26 weeks of continuous service at the 15th week",
+        "ys | 12 months of placement | 100 percent of base | | Pregnancy loss | 2 | none | not applicable | 100 percent of base | Company-paid parental leave runs concurrently with unpaid job-protected leave where both apply. It may be taken in a single block or in up to three blocks of at least one full week each. ## 3. Medical and disability interaction Birth parents may be eligible for short-term disability benefits for the recovery period. Short-term disability runs before company-paid parental leave begins and does not reduce the 12 weeks in the table above. The benefits administrator confirms",
+        "# Northwind Systems - Parental Leave Policy (United Kingdom) page_id: parental-leave-uk-2025 policy_id: HR-LEAVE-011-UK effective_date: 2025-04-01 supersedes: none status: active region: UK page_type: policy ## 1. Scope Applies to employees on the UK payroll based at the London office. The entitlements below are enhanced above statutory minimums and are not transferable to the Chennai or Austin offices. ## 2. Entitlement | Leave type | Full pay | Then half pay | Then statutory or unpaid | Total available | |---|---|---|---|---| | Maternity leave | 18 weeks | 8 weeks | 26 weeks | 52 weeks | |"
+      ]
+    },
+    "C10": {
+      "question": "What notice period do I have to serve if I resign? I'm an L3 developer.",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_46d00fb7cb37",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "notice-probation-uk-2025_chunk_2",
+        "notice-probation-in-2025_chunk_2",
+        "notice-probation-us-2025_chunk_2"
+      ],
+      "contexts": [
+        "Notice period after probation | Grade band | Employee resignation | Termination by company | Payment in lieu of notice | |---|---|---|---| | L1 - L2 | 1 month | 1 month | at company discretion | | L3 - L4 | 2 months | 2 months | at company discretion | | L5 and above | 3 months | 3 months | at company discretion | Statutory minimum notice from the company increases with service and is applied where it exceeds the contractual figure. Notice runs in calendar months from the date the resignation is received in writing. ## 4. Garden leave and restrictions The company may place a departing",
+        "artner escalates to the business unit head. ## 3. Notice period after confirmation | Grade band | Employee resignation | Termination by company | Maximum buy-out | |---|---|---|---| | L1 - L2 | 60 days | 60 days | 30 days | | L3 - L4 | 90 days | 60 days | 45 days | | L5 and above | 90 days | 90 days | not permitted | Notice is counted in calendar days from the date the resignation is acknowledged in writing, not from the date the email was sent. Annual leave may not be used to offset notice except with the written approval of the business unit head. ## 4. Resignation procedure 1. Submit the",
+        "review period is used for structured feedback and does not change the at-will nature of employment. Benefits eligibility begins on the first of the month following the date of hire and is not tied to this period. ## 3. Requested notice on resignation | Grade band | Requested notice | Treated as eligible for rehire if given | Unused PTO paid out | |---|---|---|---| | L1 - L2 | 2 weeks | yes | per state rule, see table note | | L3 - L4 | 3 weeks | yes | per state rule, see table note | | L5 and above | 4 weeks | yes | per state rule, see table note | Table note: accrued unused paid time off is"
+      ]
+    },
+    "C11": {
+      "question": "I'm in the London office, grade L4. What notice do I have to give when I resign?",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_a7df39882076",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "notice-probation-uk-2025_chunk_0",
+        "annual-leave-2023_chunk_1",
+        "annual-leave-2025_chunk_1"
+      ],
+      "contexts": [
+        "# Northwind Systems - Notice Period, Resignation and Probation (United Kingdom) page_id: notice-probation-uk-2025 policy_id: HR-SEP-005-UK effective_date: 2025-04-01 supersedes: none status: active region: UK page_type: policy ## 1. Scope Applies to employees on the UK payroll based at the London office. Contractual notice in the individual contract of employment prevails where it is longer than the table below. ## 2. Probation | Grade band | Probation duration | Extension allowed | Notice during probation (either side) | |---|---|---|---| | L1 - L2 | 3 months | up to 3 months, once | 1 week",
+        "es across Chennai, London and Austin. Interns, contractors and agency staff are covered by separate commercial terms and are not eligible. Employees serving a notice period may take leave only with written approval from their reporting manager. ## 3. Entitlement | Grade band | Annual leave days | Max carry-over into next year | Accrual rate per month | |---|---|---|---| | L1 - L3 (Associate to Senior Engineer) | 18 | 5 | 1.50 | | L4 - L5 (Lead, Principal) | 21 | 7 | 1.75 | | L6+ (Director and above) | 24 | 7 | 2.00 | | Fixed-term (under 12 months) | 10 | 0 | 0.83 | Leave accrues monthly and",
+        "plies to all permanent employees across Chennai, London and Austin. Interns, contractors and agency staff are covered by separate commercial terms and are not eligible. Employees serving a notice period may take leave only with written approval from their reporting manager. ## 3. Entitlement | Grade band | Annual leave days | Max carry-over into next year | Accrual rate per month | |---|---|---|---| | L1 - L3 (Associate to Senior Engineer) | 22 | 10 | 1.83 | | L4 - L5 (Lead, Principal) | 25 | 12 | 2.08 | | L6+ (Director and above) | 28 | 12 | 2.33 | | Fixed-term (under 12 months) | 12 | 0 |"
+      ]
+    },
+    "C12": {
+      "question": "Austin office, L5. how much notice am I supposed to give before leaving?",
+      "answer": "You do not need to give any notice before leaving.  \nThe U.S. policy states that employment is at will, so either party may end the relationship at any time, with or without notice.  \n[HR-SEP-005-US §1, effective 2025-04-01]",
+      "trace_id": "tr_b5799684523c",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "annual-leave-2023_chunk_1",
+        "notice-probation-us-2025_chunk_0",
+        "notice-probation-uk-2025_chunk_4"
+      ],
+      "contexts": [
+        "es across Chennai, London and Austin. Interns, contractors and agency staff are covered by separate commercial terms and are not eligible. Employees serving a notice period may take leave only with written approval from their reporting manager. ## 3. Entitlement | Grade band | Annual leave days | Max carry-over into next year | Accrual rate per month | |---|---|---|---| | L1 - L3 (Associate to Senior Engineer) | 18 | 5 | 1.50 | | L4 - L5 (Lead, Principal) | 21 | 7 | 1.75 | | L6+ (Director and above) | 24 | 7 | 2.00 | | Fixed-term (under 12 months) | 10 | 0 | 0.83 | Leave accrues monthly and",
+        "# Northwind Systems - Notice Period, Resignation and Probation (United States) page_id: notice-probation-us-2025 policy_id: HR-SEP-005-US effective_date: 2025-04-01 supersedes: none status: active region: US page_type: policy ## 1. Scope and employment at will Applies to employees on the US payroll based at the Austin office or working remotely within the United States. Employment is at will: either the employee or the company may end the employment relationship at any time, with or without cause and with or without notice. Nothing in this policy creates a contract of employment or a",
+        "notice to your reporting manager, stating the intended last working day. 2. The reporting manager forwards the notice to the People Ops partner within 2 working days. 3. The People Ops partner issues an acknowledgement letter and confirms the last working day and any accrued leave balance. 4. Complete the handover plan and return all company property. 5. Attend an exit conversation; attendance is optional but encouraged. ## 6. Final pay and references Final pay is made in the payroll run for the month of leaving, or the next run where the last working day falls after the payroll cut-off."
+      ]
+    },
+    "C13": {
+      "question": "I'm on the Singapore payroll. How many paid sick days do I get a year?",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_d18ecc24406e",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "sick-leave-2025_chunk_0",
+        "sick-leave-2025_chunk_1",
+        "leave-attendance-faq_chunk_2"
+      ],
+      "contexts": [
+        "# Northwind Systems - Sick Leave and Medical Absence Policy page_id: sick-leave-2025 policy_id: HR-LEAVE-004 effective_date: 2025-04-01 supersedes: none status: active region: ALL page_type: policy ## 1. Intent Northwind Systems expects employees who are unwell to stay away from the workplace and recover. Sick leave is a separate bucket from annual leave and cannot be encashed or carried over. ## 2. Entitlement and certification | Office | Paid sick days per leave year | Self-certified days (no document) | Medical certificate required from | Pay during extended medical leave |",
+        "leave year | Self-certified days (no document) | Medical certificate required from | Pay during extended medical leave | |---|---|---|---|---| | Chennai (IN) | 12 | 2 consecutive | day 3 | 60 percent of basic for days 13-90 | | London (UK) | 10 | 7 consecutive | day 8 | statutory sick pay from day 11 | | Austin (US) | 8 | 3 consecutive | day 4 | short-term disability from day 9 | Sick leave does not accrue monthly; the full entitlement is credited on 1 April or on the date of joining, whichever is later, and is pro-rated for joiners after 1 October. ## 3. Notification procedure 1. Inform your",
+        "absences, and a month for anything longer than a week. **Can I cash out my leave?** Only when you leave the company, and only up to 15 days. **Is sick leave part of my annual leave?** No, it is a separate balance. Chennai employees have 12 paid sick days; London and Austin have fewer. You do not need a certificate for a single day off. ## Attendance and working location **How many days do I need to be in the office?** Two to three days a week depending on your team. Your team lead publishes anchor days. **Can I work from home for a whole week?** Ad hoc work from home is fine with your"
+      ]
+    },
+    "C14": {
+      "question": "I work out of our Berlin office on a German contract. What is my notice period if I resign?",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_a4610e8c894f",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "notice-probation-in-2025_chunk_2",
+        "notice-probation-uk-2025_chunk_0",
+        "notice-probation-us-2025_chunk_0"
+      ],
+      "contexts": [
+        "artner escalates to the business unit head. ## 3. Notice period after confirmation | Grade band | Employee resignation | Termination by company | Maximum buy-out | |---|---|---|---| | L1 - L2 | 60 days | 60 days | 30 days | | L3 - L4 | 90 days | 60 days | 45 days | | L5 and above | 90 days | 90 days | not permitted | Notice is counted in calendar days from the date the resignation is acknowledged in writing, not from the date the email was sent. Annual leave may not be used to offset notice except with the written approval of the business unit head. ## 4. Resignation procedure 1. Submit the",
+        "# Northwind Systems - Notice Period, Resignation and Probation (United Kingdom) page_id: notice-probation-uk-2025 policy_id: HR-SEP-005-UK effective_date: 2025-04-01 supersedes: none status: active region: UK page_type: policy ## 1. Scope Applies to employees on the UK payroll based at the London office. Contractual notice in the individual contract of employment prevails where it is longer than the table below. ## 2. Probation | Grade band | Probation duration | Extension allowed | Notice during probation (either side) | |---|---|---|---| | L1 - L2 | 3 months | up to 3 months, once | 1 week",
+        "# Northwind Systems - Notice Period, Resignation and Probation (United States) page_id: notice-probation-us-2025 policy_id: HR-SEP-005-US effective_date: 2025-04-01 supersedes: none status: active region: US page_type: policy ## 1. Scope and employment at will Applies to employees on the US payroll based at the Austin office or working remotely within the United States. Employment is at will: either the employee or the company may end the employment relationship at any time, with or without cause and with or without notice. Nothing in this policy creates a contract of employment or a"
+      ]
+    },
+    "C15": {
+      "question": "How many paid sick days do I get per year?",
+      "answer": "",
+      "trace_id": "tr_4b2017bce340",
+      "finish_reason": "length",
+      "chunk_ids": [
+        "sick-leave-2025_chunk_0",
+        "leave-attendance-faq_chunk_0",
+        "sick-leave-2025_chunk_1"
+      ],
+      "contexts": [
+        "# Northwind Systems - Sick Leave and Medical Absence Policy page_id: sick-leave-2025 policy_id: HR-LEAVE-004 effective_date: 2025-04-01 supersedes: none status: active region: ALL page_type: policy ## 1. Intent Northwind Systems expects employees who are unwell to stay away from the workplace and recover. Sick leave is a separate bucket from annual leave and cannot be encashed or carried over. ## 2. Entitlement and certification | Office | Paid sick days per leave year | Self-certified days (no document) | Medical certificate required from | Pay during extended medical leave |",
+        "# Northwind Systems - Leave and Attendance FAQ page_id: leave-attendance-faq policy_id: HR-FAQ-002 effective_date: 2025-04-01 supersedes: none status: active region: ALL page_type: faq ## About this page This FAQ is maintained by the People Ops team as a quick reference. Where it differs from a policy document, the policy document is authoritative. It was last reviewed shortly after the FY2025-26 policy refresh and some answers still reflect earlier practice. ## Leave **How many leave days do I get?** Most employees get 20 days of annual leave a year. Leads and above get more. The exact",
+        "leave year | Self-certified days (no document) | Medical certificate required from | Pay during extended medical leave | |---|---|---|---|---| | Chennai (IN) | 12 | 2 consecutive | day 3 | 60 percent of basic for days 13-90 | | London (UK) | 10 | 7 consecutive | day 8 | statutory sick pay from day 11 | | Austin (US) | 8 | 3 consecutive | day 4 | short-term disability from day 9 | Sick leave does not accrue monthly; the full entitlement is credited on 1 April or on the date of joining, whichever is later, and is pro-rated for joiners after 1 October. ## 3. Notification procedure 1. Inform your"
+      ]
+    },
+    "C16": {
+      "question": "Kindly advise the procedure for availing adoption leave.",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_d61ff4b6aaee",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "parental-leave-uk-2025_chunk_3",
+        "parental-leave-us-2025_chunk_1",
+        "parental-leave-in-2025_chunk_5"
+      ],
+      "contexts": [
+        ". Keeping in touch days are voluntary on both sides. ## 4. Repayment condition Where an employee does not return to work for at least 13 weeks after enhanced maternity or adoption leave, the enhanced element above statutory pay is recoverable on a pro-rata basis. The statutory element is never recoverable. ## 5. Procedure 1. Notify your reporting manager and the People Ops partner no later than the 15th week before the expected week of childbirth. 2. Provide the MATB1 certificate or the adoption matching certificate. 3. The People Ops partner issues a written confirmation of the leave dates,",
+        "titlement | Leave type | Company-paid weeks | Service required | Must be used within | Pay level | |---|---|---|---|---| | Birth parent (primary carer) | 12 | 90 days | 12 months of birth | 100 percent of base | | Non-birth parent (secondary carer) | 6 | 90 days | 12 months of birth | 100 percent of base | | Adoption or foster placement (primary) | 12 | 90 days | 12 months of placement | 100 percent of base | | Adoption or foster placement (secondary) | 6 | 90 days | 12 months of placement | 100 percent of base | | Pregnancy loss | 2 | none | not applicable | 100 percent of base |",
+        "request an extension against unused annual leave. ## 6. Related If the birth or adoption coincides with an international assignment, see the Relocation Policy for dependant travel support."
+      ]
+    },
+    "C17": {
+      "question": "I got married last month. How do I add my spouse to the medical policy and is there a window for that?",
+      "answer": "",
+      "trace_id": "tr_d4fc5435d087",
+      "finish_reason": "length",
+      "chunk_ids": [
+        "sick-leave-2025_chunk_0",
+        "handbook-extract-pay-benefits_chunk_2",
+        "notice-probation-us-2025_chunk_4"
+      ],
+      "contexts": [
+        "# Northwind Systems - Sick Leave and Medical Absence Policy page_id: sick-leave-2025 policy_id: HR-LEAVE-004 effective_date: 2025-04-01 supersedes: none status: active region: ALL page_type: policy ## 1. Intent Northwind Systems expects employees who are unwell to stay away from the workplace and recover. Sick leave is a separate bucket from annual leave and cannot be encashed or carried over. ## 2. Entitlement and certification | Office | Paid sick days per leave year | Self-certified days (no document) | Medical certificate required from | Pay during extended medical leave |",
+        "onthly contribution | Enrolment window | |---|---|---|---|---| | Chennai | INR 500,000 sum insured | spouse, 2 children, parents | nil | within 30 days of joining | | London | private medical scheme, band B | spouse and children, opt-in | GBP 22 | within 30 days of joining | | Austin | PPO or HDHP choice | spouse and children, opt-in | USD 95 (PPO) | within 30 days of joining | Mid-year additions are allowed only on marriage, birth or adoption, and must be notified within 30 days of the event. ## Employee referral bonus | Referred role grade | Bonus amount | Paid when | |---|---|---| | L1 -",
+        "ithin 1 working day of that notification. 3. The People Ops partner schedules the offboarding checklist and confirms the final pay date and benefits end date. 4. Return all company property to the IT asset desk on or before the last working day. 5. Complete the voluntary exit survey. ## 5. Benefits at separation Health coverage ends on the last day of the month in which employment ends. Continuation coverage information is mailed by the benefits administrator within 14 days of the separation date. The 401(k) administrator contacts the employee separately regarding the account. ## 6."
+      ]
+    },
+    "C18": {
+      "question": "My manager hasn't responded to my leave request for a week, so it counts as approved, right?",
+      "answer": "",
+      "trace_id": "tr_aeaf26f04f8d",
+      "finish_reason": "length",
+      "chunk_ids": [
+        "annual-leave-2025_chunk_3",
+        "annual-leave-2023_chunk_3",
+        "annual-leave-2025_chunk_4"
+      ],
+      "contexts": [
+        "Encashment of leave is permitted only at the time of separation and is capped at 15 days regardless of grade band. ## 5. Applying for leave 1. Raise the request in Workday at least 5 working days in advance (15 working days for any absence of more than 5 consecutive days). 2. Your reporting manager approves or rejects within 3 working days. 3. For absences over 10 consecutive days, the skip-level manager must also approve. 4. Update your calendar and hand over active work items before the first day of leave. 5. Leave taken without an approved request is treated as unauthorised absence and is",
+        "only at the time of separation and is capped at 10 days regardless of grade band. ## 5. Applying for leave 1. Raise the request in the HR portal at least 7 working days in advance (21 working days for any absence of more than 5 consecutive days). 2. Your reporting manager approves or rejects within 5 working days. 3. For absences over 7 consecutive days, the skip-level manager must also approve. 4. Update your calendar and hand over active work items before the first day of leave. 5. Leave taken without an approved request is treated as loss of pay. ## 6. Public holidays Public holidays are",
+        "tems before the first day of leave. 5. Leave taken without an approved request is treated as unauthorised absence and is handled under the Disciplinary Policy. ## 6. Public holidays Public holidays are published per office in January and are not deducted from annual leave. Employees who work on a declared public holiday may claim compensatory off within 60 days. ## 7. Related policies See the Sick Leave Policy, the Parental Leave Policy for your region, and the Relocation Policy if your leave is connected to an international transfer."
+      ]
+    },
+    "C19": {
+      "question": "I'm resigning from the Chennai office. Can I use my leave balance to shorten my notice period?",
+      "answer": "No. Under the Annual Leave Policy, employees who are in a notice period may only take leave with written approval from their reporting manager, and the policy does not allow leave to be used to shorten the notice period.  \n[HR-LEAVE-001 §3, effective 2023-04-01]",
+      "trace_id": "tr_8aa586d41d16",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "leave-attendance-faq_chunk_2",
+        "notice-probation-uk-2025_chunk_3",
+        "annual-leave-2023_chunk_1"
+      ],
+      "contexts": [
+        "absences, and a month for anything longer than a week. **Can I cash out my leave?** Only when you leave the company, and only up to 15 days. **Is sick leave part of my annual leave?** No, it is a separate balance. Chennai employees have 12 paid sick days; London and Austin have fewer. You do not need a certificate for a single day off. ## Attendance and working location **How many days do I need to be in the office?** Two to three days a week depending on your team. Your team lead publishes anchor days. **Can I work from home for a whole week?** Ad hoc work from home is fine with your",
+        "m the date the resignation is received in writing. ## 4. Garden leave and restrictions The company may place a departing employee on garden leave for all or part of the notice period. During garden leave the employee remains employed, continues to receive full pay and benefits, and must remain available but must not contact clients or attend the office. Post-termination restrictions in the contract of employment continue to apply. ## 5. Resignation procedure 1. Give written notice to your reporting manager, stating the intended last working day. 2. The reporting manager forwards the notice to",
+        "es across Chennai, London and Austin. Interns, contractors and agency staff are covered by separate commercial terms and are not eligible. Employees serving a notice period may take leave only with written approval from their reporting manager. ## 3. Entitlement | Grade band | Annual leave days | Max carry-over into next year | Accrual rate per month | |---|---|---|---| | L1 - L3 (Associate to Senior Engineer) | 18 | 5 | 1.50 | | L4 - L5 (Lead, Principal) | 21 | 7 | 1.75 | | L6+ (Director and above) | 24 | 7 | 2.00 | | Fixed-term (under 12 months) | 10 | 0 | 0.83 | Leave accrues monthly and"
+      ]
+    },
+    "C20": {
+      "question": "I'm an Austin employee leaving next month. Will my unused PTO be paid out?",
+      "answer": "No – under the current U.S. policy, unused PTO is not paid out to employees in Texas (including Austin) unless a written agreement specifically provides otherwise.  \n[HR-SEP-005-US §3, effective 2025-04-01]",
+      "trace_id": "tr_0b2995a5b145",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "notice-probation-us-2025_chunk_3",
+        "notice-probation-us-2025_chunk_2",
+        "notice-probation-uk-2025_chunk_5"
+      ],
+      "contexts": [
+        "ble note | | L5 and above | 4 weeks | yes | per state rule, see table note | Table note: accrued unused paid time off is paid out at separation only where the employee's work state requires it. Texas does not require payout, so Austin-based employees do not receive a payout unless a written agreement provides otherwise. ## 4. Resignation procedure 1. Notify your reporting manager in writing of your intended last working day. 2. Submit the separation request in Workday within 1 working day of that notification. 3. The People Ops partner schedules the offboarding checklist and confirms the",
+        "review period is used for structured feedback and does not change the at-will nature of employment. Benefits eligibility begins on the first of the month following the date of hire and is not tied to this period. ## 3. Requested notice on resignation | Grade band | Requested notice | Treated as eligible for rehire if given | Unused PTO paid out | |---|---|---|---| | L1 - L2 | 2 weeks | yes | per state rule, see table note | | L3 - L4 | 3 weeks | yes | per state rule, see table note | | L5 and above | 4 weeks | yes | per state rule, see table note | Table note: accrued unused paid time off is",
+        "in the payroll run for the month of leaving, or the next run where the last working day falls after the payroll cut-off. Accrued untaken annual leave is paid out; leave taken in excess of accrual is recovered. The company provides factual references confirming job title and dates of employment only."
+      ]
+    },
+    "C21": {
+      "question": "If I fall sick during my annual leave, do I get those annual leave days back?",
+      "answer": "No – sick leave taken during an approved annual‑leave period is **not** converted back to annual leave.  \n[HR-LEAVE-004 §6, effective 2025‑04‑01]",
+      "trace_id": "tr_0f3b52f88b00",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "sick-leave-2025_chunk_4",
+        "sick-leave-2025_chunk_0",
+        "annual-leave-2023_chunk_4"
+      ],
+      "contexts": [
+        "ple Ops partner in consultation with the business unit head. Extended medical leave is capped at 90 calendar days in any rolling 12-month period. ## 5. Misuse Patterns of single-day absences adjoining weekends or public holidays may be reviewed. Where sick leave is found to have been claimed dishonestly, the matter is handled under the Code of Conduct and may result in recovery of pay. ## 6. Interaction with other leave Sick leave taken during an approved annual leave period is not converted back to annual leave. Sickness during parental leave is governed by the regional Parental Leave Policy.",
+        "# Northwind Systems - Sick Leave and Medical Absence Policy page_id: sick-leave-2025 policy_id: HR-LEAVE-004 effective_date: 2025-04-01 supersedes: none status: active region: ALL page_type: policy ## 1. Intent Northwind Systems expects employees who are unwell to stay away from the workplace and recover. Sick leave is a separate bucket from annual leave and cannot be encashed or carried over. ## 2. Entitlement and certification | Office | Paid sick days per leave year | Self-certified days (no document) | Medical certificate required from | Pay during extended medical leave |",
+        "f leave. 5. Leave taken without an approved request is treated as loss of pay. ## 6. Public holidays Public holidays are published per office in January and are not deducted from annual leave. Employees who work on a declared public holiday may claim compensatory off within 30 days. ## 7. Related policies See the Sick Leave Policy and the Maternity Leave Policy for your region."
+      ]
+    },
+    "C22": {
+      "question": "Is there any provision for bereavement leave? My grandfather passed away and I need a few days.",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_5372bbe21f68",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "sick-leave-2025_chunk_0",
+        "annual-leave-2023_chunk_3",
+        "parental-leave-in-2025_chunk_5"
+      ],
+      "contexts": [
+        "# Northwind Systems - Sick Leave and Medical Absence Policy page_id: sick-leave-2025 policy_id: HR-LEAVE-004 effective_date: 2025-04-01 supersedes: none status: active region: ALL page_type: policy ## 1. Intent Northwind Systems expects employees who are unwell to stay away from the workplace and recover. Sick leave is a separate bucket from annual leave and cannot be encashed or carried over. ## 2. Entitlement and certification | Office | Paid sick days per leave year | Self-certified days (no document) | Medical certificate required from | Pay during extended medical leave |",
+        "only at the time of separation and is capped at 10 days regardless of grade band. ## 5. Applying for leave 1. Raise the request in the HR portal at least 7 working days in advance (21 working days for any absence of more than 5 consecutive days). 2. Your reporting manager approves or rejects within 5 working days. 3. For absences over 7 consecutive days, the skip-level manager must also approve. 4. Update your calendar and hand over active work items before the first day of leave. 5. Leave taken without an approved request is treated as loss of pay. ## 6. Public holidays Public holidays are",
+        "request an extension against unused annual leave. ## 6. Related If the birth or adoption coincides with an international assignment, see the Relocation Policy for dependant travel support."
+      ]
+    },
+    "C23": {
+      "question": "How do relocation allowances work if I transfer from Chennai to London?",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_3f11be525d7a",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "leave-attendance-faq_chunk_2",
+        "handbook-extract-pay-benefits_chunk_1",
+        "handbook-extract-pay-benefits_chunk_2"
+      ],
+      "contexts": [
+        "absences, and a month for anything longer than a week. **Can I cash out my leave?** Only when you leave the company, and only up to 15 days. **Is sick leave part of my annual leave?** No, it is a separate balance. Chennai employees have 12 paid sick days; London and Austin have fewer. You do not need a certificate for a single day off. ## Attendance and working location **How many days do I need to be in the office?** Two to three days a week depending on your team. Your team lead publishes anchor days. **Can I work from home for a whole week?** Ad hoc work from home is fine with your",
+        "Pay date | Payroll cut-off for changes | Payslip available from | |---|---|---|---| | Chennai | last working day of the month | 18th of the month | 1 working day after pay date | | London | 28th, or the prior working day | 15th of the month | on the pay date | | Austin | 15th and the last working day | 8th and 22nd | on the pay date | Corrections to pay are processed in the next cycle. ## Health insurance | Office | Employee cover | Family cover included | Employee monthly contribution | Enrolment window | |---|---|---|---|---| | Chennai | INR 500,000 sum insured | spouse, 2 children,",
+        "onthly contribution | Enrolment window | |---|---|---|---|---| | Chennai | INR 500,000 sum insured | spouse, 2 children, parents | nil | within 30 days of joining | | London | private medical scheme, band B | spouse and children, opt-in | GBP 22 | within 30 days of joining | | Austin | PPO or HDHP choice | spouse and children, opt-in | USD 95 (PPO) | within 30 days of joining | Mid-year additions are allowed only on marriage, birth or adoption, and must be notified within 30 days of the event. ## Employee referral bonus | Referred role grade | Bonus amount | Paid when | |---|---|---| | L1 -"
+      ]
+    },
+    "C24": {
+      "question": "is there a gym reimbursement or any wellness allowance",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_8b528bc53c65",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "parental-leave-in-2023_chunk_3",
+        "parental-leave-in-2025_chunk_3",
+        "handbook-extract-pay-benefits_chunk_4"
+      ],
+      "contexts": [
+        "r. ## 4. Creche and nursing The Chennai office provides a nursing room on the third floor. A creche reimbursement of INR 5,000 per month per child is available until the child turns 4, claimed through the monthly expense process. ## 5. Procedure 1. Notify your reporting manager and the HR business partner in writing, giving the expected date and the planned leave start date. 2. Submit Form MAT-IN with your employee ID in the format EMP-##### and supporting medical documentation at least 10 weeks before the leave start date. 3. HR confirms the entitlement and the return date in writing within",
+        "fter their return date, by agreement with the reporting manager. This overrides the office attendance expectation in the Hybrid Working Policy for that period. ## 4. Creche and nursing The Chennai office provides a nursing room on the third floor. A creche reimbursement of INR 8,000 per month per child is available until the child turns 6, claimed through the monthly expense process. ## 5. Procedure 1. Notify your reporting manager and the People Ops partner in writing, giving the expected date and the planned leave start date. 2. Submit Form PL-IN with your employee ID in the format",
+        "| The referrer must be a confirmed employee and must not be the hiring manager. The bonus is taxable and is paid through payroll. ## Travel and expense reimbursement Business travel needs pre-approval from your reporting manager, and from the function head for any international trip. | Expense item | Limit or rule | |---|---| | Hotel per night, within India | INR 6,500 | | Hotel per night, London | GBP 190 | | Hotel per night, within US | USD 210 | | Meals per day (India / UK / US) | INR 1,800 / GBP 40 / USD 65 | | Mileage (India / UK / US) | INR 12 per km / GBP 0.45 per mile / USD 0.67 per"
+      ]
+    },
+    "C25": {
+      "question": "I've been called for jury duty. Is that paid leave?",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_ae9ceb7d0a62",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "notice-probation-uk-2025_chunk_5",
+        "notice-probation-us-2025_chunk_3",
+        "annual-leave-2025_chunk_0"
+      ],
+      "contexts": [
+        "in the payroll run for the month of leaving, or the next run where the last working day falls after the payroll cut-off. Accrued untaken annual leave is paid out; leave taken in excess of accrual is recovered. The company provides factual references confirming job title and dates of employment only.",
+        "ble note | | L5 and above | 4 weeks | yes | per state rule, see table note | Table note: accrued unused paid time off is paid out at separation only where the employee's work state requires it. Texas does not require payout, so Austin-based employees do not receive a payout unless a written agreement provides otherwise. ## 4. Resignation procedure 1. Notify your reporting manager in writing of your intended last working day. 2. Submit the separation request in Workday within 1 working day of that notification. 3. The People Ops partner schedules the offboarding checklist and confirms the",
+        "# Northwind Systems - Annual Leave Policy page_id: annual-leave-2025 policy_id: HR-LEAVE-002 effective_date: 2025-04-01 supersedes: annual-leave-2023 status: active region: ALL page_type: policy ## 1. Purpose Northwind Systems provides paid annual leave (also called earned leave in India) so that employees can rest, travel and attend to personal matters. This policy replaces the 2023 Annual Leave Policy with effect from the start of the FY2025-26 leave year. ## 2. Scope Applies to all permanent employees across Chennai, London and Austin. Interns, contractors and agency staff are covered by"
+      ]
+    },
+    "C26": {
+      "question": "I got an offer from another company. Can HR help me negotiate a counter-offer?",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_d952f40473e1",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "remote-working-2023_chunk_4",
+        "notice-probation-in-2025_chunk_4",
+        "leave-attendance-faq_chunk_4"
+      ],
+      "contexts": [
+        "3. Remain reachable during your team's core hours. 4. Ad hoc work from home beyond 10 days in a calendar month requires written approval from the function head. ## 6. Working from another country Working from a country other than your payroll country is permitted for a maximum of 30 working days in any rolling 12 months, subject to prior approval by the HR business partner. ## 7. Core hours Core hours are 12:00 to 16:00 local time.",
+        "urn laptop, access card and any hardware to the IT asset desk, and complete the no-dues clearance across IT, Finance and Facilities. 6. Attend the exit interview with the People Ops partner in the final week. ## 5. Full and final settlement Full and final settlement is paid within 45 days of the last working day. Leave encashment, gratuity where applicable and recovery of any buy-out or notice shortfall are netted in that settlement. The relieving letter and experience letter are issued only after clearance is complete. ## 6. Absconding An employee absent without approval for 7 consecutive",
+        "16:00 in your local time zone. ## Expenses and other common questions **How long do I have to submit an expense claim?** Submit within a month of incurring the expense. Older claims need a written justification to Finance. **Who do I ask about something not covered here?** Raise a ticket with People Ops, or speak to your People Ops partner. For anything about moving offices between countries, ask about the Relocation Policy. ## Table of common limits | Question | Short answer | |---|---| | Notice for leave over 5 days | 15 working days | | Compensatory off window | 60 days | | Ad hoc WFH days"
+      ]
+    },
+    "C27": {
+      "question": "I am relocating my working hours slightly to overlap with the US team. Does that need a formal flexible working request?",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_7ce36a0afdba",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "hybrid-working-2025_chunk_4",
+        "remote-working-2023_chunk_4",
+        "leave-attendance-faq_chunk_3"
+      ],
+      "contexts": [
+        "nd of the previous working day. 2. Mark the day in the team calendar as WFH. 3. Remain reachable during your team's core hours. 4. Ad hoc work from home beyond 6 days in a calendar month requires written approval from the function head. ## 6. Working from another country Working from a country other than your payroll country is permitted for a maximum of 20 working days in any rolling 12 months, subject to prior approval by the People Ops partner and the tax team. Longer arrangements are treated as a transfer and fall under the Relocation Policy. ## 7. Core hours Core hours are 11:00 to 16:00",
+        "3. Remain reachable during your team's core hours. 4. Ad hoc work from home beyond 10 days in a calendar month requires written approval from the function head. ## 6. Working from another country Working from a country other than your payroll country is permitted for a maximum of 30 working days in any rolling 12 months, subject to prior approval by the HR business partner. ## 7. Core hours Core hours are 12:00 to 16:00 local time.",
+        "Your team lead publishes anchor days. **Can I work from home for a whole week?** Ad hoc work from home is fine with your reporting manager's agreement. If it becomes more than a few days in a month you need the function head to sign off in writing. **Can I work from abroad while visiting family?** Short periods are possible with approval from the People Ops partner. The limit is roughly a month a year and there are tax considerations. **What are core hours?** 11:00 to 16:00 in your local time zone. ## Expenses and other common questions **How long do I have to submit an expense claim?**"
+      ]
+    },
+    "C28": {
+      "question": "Kindly confirm the notice period applicable during the probation period.",
+      "answer": "I cannot answer this based on the provided documents.",
+      "trace_id": "tr_8356fb8e3a43",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "notice-probation-in-2025_chunk_0",
+        "notice-probation-uk-2025_chunk_1",
+        "notice-probation-uk-2025_chunk_0"
+      ],
+      "contexts": [
+        "# Northwind Systems - Notice Period, Resignation and Probation (India) page_id: notice-probation-in-2025 policy_id: HR-SEP-005-IN effective_date: 2025-04-01 supersedes: none status: active region: IN page_type: policy ## 1. Scope Applies to employees on the India payroll. Notice periods and probation durations differ by office; a request that does not state the office cannot be answered from this file alone. ## 2. Probation and confirmation | Grade band | Probation duration | Extension allowed | Notice during probation (either side) | |---|---|---|---| | L1 - L2 | 6 months | up to 3 months,",
+        "allowed | Notice during probation (either side) | |---|---|---|---| | L1 - L2 | 3 months | up to 3 months, once | 1 week | | L3 - L4 | 3 months | up to 3 months, once | 2 weeks | | L5 and above | 3 months | not permitted | 4 weeks | A probation review meeting is held at the midpoint and again in the final two weeks. The outcome is recorded in writing by the reporting manager and countersigned by the People Ops partner. Successful completion is confirmed by letter. ## 3. Notice period after probation | Grade band | Employee resignation | Termination by company | Payment in lieu of notice |",
+        "# Northwind Systems - Notice Period, Resignation and Probation (United Kingdom) page_id: notice-probation-uk-2025 policy_id: HR-SEP-005-UK effective_date: 2025-04-01 supersedes: none status: active region: UK page_type: policy ## 1. Scope Applies to employees on the UK payroll based at the London office. Contractual notice in the individual contract of employment prevails where it is longer than the table below. ## 2. Probation | Grade band | Probation duration | Extension allowed | Notice during probation (either side) | |---|---|---|---| | L1 - L2 | 3 months | up to 3 months, once | 1 week"
+      ]
+    },
+    "C29": {
+      "question": "What is the hotel limit per night in London for business travel?",
+      "answer": "The hotel limit per night for business travel in London is **GBP 190**.  \n[HR-HB-001 §Travel and expense reimbursement, effective 2025-04-01]",
+      "trace_id": "tr_06bbfb409216",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "handbook-extract-pay-benefits_chunk_4",
+        "handbook-extract-pay-benefits_chunk_5",
+        "hybrid-working-2025_chunk_2"
+      ],
+      "contexts": [
+        "| The referrer must be a confirmed employee and must not be the hiring manager. The bonus is taxable and is paid through payroll. ## Travel and expense reimbursement Business travel needs pre-approval from your reporting manager, and from the function head for any international trip. | Expense item | Limit or rule | |---|---| | Hotel per night, within India | INR 6,500 | | Hotel per night, London | GBP 190 | | Hotel per night, within US | USD 210 | | Meals per day (India / UK / US) | INR 1,800 / GBP 40 / USD 65 | | Mileage (India / UK / US) | INR 12 per km / GBP 0.45 per mile / USD 0.67 per",
+        "UK / US) | INR 1,800 / GBP 40 / USD 65 | | Mileage (India / UK / US) | INR 12 per km / GBP 0.45 per mile / USD 0.67 per mile | | Claim submission window | 45 days from the expense date | Economy class applies to flights under 6 hours. Alcohol, fines and family travel are not reimbursable. Relocation costs are dealt with in the Relocation Policy. ## Performance review in brief The review year runs 1 April to 31 March. Ratings are released in April and increments take effect on 1 June. | Rating | Label | Increment multiplier | |---|---|---| | 5 | Outstanding | 1.8x | | 4 | Exceeds expectations",
+        "on which the whole team attends. Anchor days are published by the team lead each quarter and cannot be changed with less than 2 weeks notice. ## 3. Fully remote arrangements A fully remote arrangement requires approval by the function head and the People Ops partner, is reviewed every 6 months, and may be withdrawn with 60 days notice. Fully remote employees must attend the office for at least 5 days per quarter, and travel for those days is reimbursed under the Travel and Expense Policy. ## 4. Home office support | Item | Amount | Frequency | Eligibility | |---|---|---|---| | One-time home"
+      ]
+    },
+    "C30": {
+      "question": "When is salary credited for Austin employees, and what is the payroll cut-off?",
+      "answer": "Salary for Austin employees is credited on the 15th of the month and on the last working day of the month. The payroll cut‑off for changes is on the 8th and the 22nd of the month.  \n[HR-HB-001 §Payroll and payslips, effective 2025-04-01]",
+      "trace_id": "tr_465e04d17ab3",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "handbook-extract-pay-benefits_chunk_1",
+        "notice-probation-uk-2025_chunk_5",
+        "handbook-extract-pay-benefits_chunk_0"
+      ],
+      "contexts": [
+        "Pay date | Payroll cut-off for changes | Payslip available from | |---|---|---|---| | Chennai | last working day of the month | 18th of the month | 1 working day after pay date | | London | 28th, or the prior working day | 15th of the month | on the pay date | | Austin | 15th and the last working day | 8th and 22nd | on the pay date | Corrections to pay are processed in the next cycle. ## Health insurance | Office | Employee cover | Family cover included | Employee monthly contribution | Enrolment window | |---|---|---|---|---| | Chennai | INR 500,000 sum insured | spouse, 2 children,",
+        "in the payroll run for the month of leaving, or the next run where the last working day falls after the payroll cut-off. Accrued untaken annual leave is paid out; leave taken in excess of accrual is recovered. The company provides factual references confirming job title and dates of employment only.",
+        "# Northwind Systems - Handbook Extract: Pay, Benefits and Conduct page_id: handbook-extract-pay-benefits policy_id: HR-HB-001 effective_date: 2025-04-01 supersedes: none status: active region: ALL page_type: handbook-extract ## Payroll and payslips Salaries are paid monthly. Payslips are published in the payroll portal and are also emailed as a password-protected PDF; the password is your employee ID in the format EMP-##### followed by your date of birth as DDMM. | Office | Pay date | Payroll cut-off for changes | Payslip available from | |---|---|---|---| | Chennai | last working day of the"
+      ]
+    },
+    "C31": {
+      "question": "How many keeping in touch days can I work during maternity leave? I'm in London.",
+      "answer": "You can work up to **10 keeping‑in‑touch days** during maternity leave. These days are paid at your normal daily rate and must be agreed with your reporting manager in advance.  \n[HR-LEAVE-011-UK §3, effective 2025-04-01]",
+      "trace_id": "tr_13707d22d176",
+      "finish_reason": "stop",
+      "chunk_ids": [
+        "parental-leave-uk-2025_chunk_2",
+        "parental-leave-uk-2025_chunk_3",
+        "parental-leave-in-2023_chunk_4"
+      ],
+      "contexts": [
+        "none | 12 weeks | Enhanced maternity and adoption pay is conditional on 26 weeks of continuous service at the 15th week before the expected week of childbirth. Employees with less service receive the statutory entitlement only. ## 3. Keeping in touch days An employee on maternity, adoption or shared parental leave may work up to 10 keeping in touch days without ending the leave. These are paid at the normal daily rate and must be agreed with the reporting manager in advance. Keeping in touch days are voluntary on both sides. ## 4. Repayment condition Where an employee does not return to work",
+        ". Keeping in touch days are voluntary on both sides. ## 4. Repayment condition Where an employee does not return to work for at least 13 weeks after enhanced maternity or adoption leave, the enhanced element above statutory pay is recoverable on a pro-rata basis. The statutory element is never recoverable. ## 5. Procedure 1. Notify your reporting manager and the People Ops partner no later than the 15th week before the expected week of childbirth. 2. Provide the MATB1 certificate or the adoption matching certificate. 3. The People Ops partner issues a written confirmation of the leave dates,",
+        "tion at least 10 weeks before the leave start date. 3. HR confirms the entitlement and the return date in writing within 15 working days. 4. Agree a handover plan with your reporting manager before the leave start date. 5. Confirm your return date at least 4 weeks before returning, or request an extension as loss of pay. ## 6. Related See the Annual Leave Policy for the treatment of leave accrued during maternity leave."
+      ]
+    }
+  }
+}
