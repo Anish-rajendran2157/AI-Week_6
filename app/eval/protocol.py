@@ -41,8 +41,9 @@ def now() -> str:
 
 
 def file_sha256(path: str) -> str:
+    # CRLF-insensitive: git normalises line endings, and a checkout must not break the label binding.
     with open(path, "rb") as f:
-        return hashlib.sha256(f.read()).hexdigest()
+        return hashlib.sha256(f.read().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def text_sha256(text: str) -> str:
@@ -64,7 +65,7 @@ def load_json(path: str) -> Optional[dict]:
 
 def save_json(path: str, obj) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
         json.dump(obj, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
