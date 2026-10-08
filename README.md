@@ -1,3 +1,43 @@
+# Week 6 — Validate the policy-answer judge (Task Set C, HR policy)
+
+The Week 6 eval: 31 mode-tagged cases, 5 deterministic assertions, 1 judged criterion, and the
+judge checked against blind hand labels. Everything lives in [eval/](eval/) and
+[app/eval/](app/eval/).
+
+| Piece | File |
+|---|---|
+| 31 cases, one Week-5 mode each (M1 to M5), 9 regression cases verbatim from failed Week-5 traces | [app/eval/cases.py](app/eval/cases.py) |
+| Assertions: 4 moved out of the judge + 1 new | [app/eval/assertions.py](app/eval/assertions.py) |
+| Judge before the split (5 criteria) | [eval/judge_v0_multicriteria.txt](eval/judge_v0_multicriteria.txt) |
+| Judge v1: one binary criterion, POLICY-CORRECT | [eval/judge_v1.txt](eval/judge_v1.txt) |
+| Judge v2: v1 + 2 of v1's own disagreements as few-shot | `eval/judge_v2.txt` (built by `scripts/make_judge_v2.py`) |
+| Frozen answers being graded (prompt `hr-rag-v2`) | `eval/answers.json` |
+| Blind hand labels (seeded 25 of 31) | `eval/labels_25.json` |
+
+**Assertions vs judge: 5 assertions, 1 judged criterion.** These moved from the judge prompt into
+code: `section_ref_resolves` (the citation is present and resolves to a real section),
+`version_cited_current` (the handbook version is cited and is the active one),
+`notice_figure_numeric`, and `refusal_path` (out-of-jurisdiction questions). One assertion is new:
+`no_superseded_figure`, a lookup against figures that exist only in the 2023 files.
+
+### Protocol (each step is enforced in code, and the commits prove the order)
+
+```bash
+python -m scripts.run_eval --no-judge          # 1. generate + freeze answers, assertions only
+git add eval/answers.json traces/eval_traces.jsonl && git commit -m "Freeze eval answers"
+python -m scripts.label_answers                # 2. blind labels: refuses if any judge result exists
+git add eval/labels_25.json && git commit -m "Blind hand labels (before judge)"
+python -m scripts.run_eval --judge v1          # 3. refuses unless the labels are committed and unmodified
+python -m scripts.run_eval --judge v1 --show-disagreements
+# 4. write eval/prediction.txt (one sentence) and commit it
+python -m scripts.make_judge_v2 --examples C?? C?? --why "..." --why "..."   # refuses until prediction is committed
+python -m scripts.run_eval --judge v2          # 5. prints agreement_before -> agreement_after
+```
+
+Each judge result in `eval/results/judge_vN.json` records the labels commit it was checked
+against. Agreement for v2 is also reported on the 23 held-out cases, since the 2 few-shot cases
+are now inside the prompt.
+
 # Week 5 — Error Analysis: Reading Traces Like a Professional (Task Set C, HR policy)
 
 Extends the Week 4 RAG app with a trace log, swaps the corpus to HR policy, and adds the

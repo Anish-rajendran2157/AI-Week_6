@@ -2,7 +2,7 @@ from typing import Any, Dict, List, Optional
 
 from app import config
 from app.generation.llm import generate_with_metadata
-from app.generation.prompts import PROMPT_TEMPLATES, PROMPT_VERSION
+from app.generation.prompts import PROMPT_TEMPLATES, PROMPT_VERSION, render_context
 from app.retrieval.chunk_store import chunk_store
 from app.services.retrieval_service import retrieval_service
 from app.tracing.trace_store import new_trace_id, write_trace
@@ -16,9 +16,9 @@ class RAGService:
 
     def answer_traced(self, query: str, retrieved: List[Dict[str, Any]], mode: str,
                       initial_k: int, final_k: int, trace_meta: Dict[str, Any]) -> Dict[str, Any]:
-        context = "\n\n---\n\n".join(r["payload"].get("text", "") for r in retrieved)
-        template = PROMPT_TEMPLATES[PROMPT_VERSION]
-        prompt = template.format(context=context, question=query)
+        version = trace_meta.get("prompt_version") or PROMPT_VERSION
+        context = render_context(version, [r["payload"] for r in retrieved])
+        prompt = PROMPT_TEMPLATES[version].format(context=context, question=query)
 
         gen = generate_with_metadata(prompt)
 
@@ -55,7 +55,7 @@ class RAGService:
                     "retriever_scores": {k: round(float(v), 6) for k, v in r.get("scores", {}).items()},
                 } for r in retrieved],
             },
-            "prompt": {"version": PROMPT_VERSION, "rendered_prompt": prompt},
+            "prompt": {"version": version, "rendered_prompt": prompt},
             "model": {"provider": "groq", "name": gen["model"], "params": gen["params"],
                       "system_fingerprint": gen.get("system_fingerprint")},
             "output": {"raw": gen["raw"], "reasoning": gen.get("reasoning"),
@@ -63,4 +63,5 @@ class RAGService:
                        "finish_reason": gen["finish_reason"], "usage": gen["usage"]},
         })
 
-        return {"answer": trace["output"]["raw"], "sources": sources, "trace_id": trace["trace_id"]}
+        return {"answer": trace["output"]["raw"], "sources": sources, "trace_id": trace["trace_id"],
+                "finish_reason": gen["finish_reason"]}

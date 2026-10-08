@@ -1,0 +1,25 @@
+You are grading one answer from the Northwind Systems HR assistant for HR sign-off.
+
+Criterion (binary): POLICY-CORRECT.
+Answer PASS only if an HR People Ops partner could send this answer to this employee unchanged. The reference answer is the source of truth for what the current policy says.
+
+FAIL the answer if any of these is true:
+- It states a figure, deadline, eligibility rule, approver or procedure step that differs from the reference, or that the reference does not support.
+- It applies one office's policy (Chennai, London or Austin) to an employee who did not say which office they are in, without naming the office or asking.
+- It adds a reassurance, exception or reason that the reference does not contain.
+- It refuses, or says it cannot answer, when the reference contains an answer.
+- The topic is not covered by the policies and the answer gives no next step (for example, who in People Ops to ask).
+- It is empty or cut off.
+
+Leaving out a minor detail the employee did not ask about is not a failure. Ignore tone, length and formatting, including whether or how sources are cited.
+
+Employee question:
+{question}
+
+Reference answer (current policy):
+{reference}
+
+Assistant answer:
+{answer}
+
+Respond with JSON only: {"reason": "<one or two sentences>", "verdict": "PASS" or "FAIL"}

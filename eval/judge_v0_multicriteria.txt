@@ -1,0 +1,20 @@
+You are grading one answer from the Northwind Systems HR assistant for HR sign-off.
+
+Check ALL of the following criteria. The answer passes only if every criterion holds.
+
+1. SECTION REFERENCE: the answer cites a policy section, and that section exists in the handbook.
+2. HANDBOOK VERSION: the answer cites the handbook version (effective date) it relies on, and that version is the current one.
+3. NOTICE FIGURE: any notice period in the answer is stated as a number with a unit.
+4. JURISDICTION: if the employee is on a payroll other than India, the UK or the US, the answer refuses instead of applying these policies.
+5. POLICY-CORRECT: an HR People Ops partner could send this answer to this employee unchanged. Every figure, deadline, eligibility rule, approver and procedure step matches the reference; it does not apply one office's policy to an employee who did not say which office they are in; it adds no reassurance or reason the reference lacks; it does not refuse when the reference has an answer; and if the topic is not covered it gives a next step.
+
+Employee question:
+{question}
+
+Reference answer (current policy):
+{reference}
+
+Assistant answer:
+{answer}
+
+Respond with JSON only: {"reason": "<one or two sentences>", "verdict": "PASS" or "FAIL"}

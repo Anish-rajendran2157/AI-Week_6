@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 from app.generation.llm import generate_with_metadata
-from app.generation.prompts import PROMPT_TEMPLATES
+from app.generation.prompts import PROMPT_TEMPLATES, render_context
 from app.retrieval.chunk_store import chunk_store
 from app.tracing.trace_store import read_traces, sha256
 
@@ -33,15 +33,15 @@ def rebuild_prompt(trace: dict) -> tuple[str, list[str]]:
         missing.append(f"prompt template for version {version!r} not available")
         return "", missing
 
-    texts = []
+    chunks = []
     for c in trace["retrieval"]["chunks"]:
         stored = chunk_store.get(c["chunk_id"])
         if stored is None:
             missing.append(f"chunk {c['chunk_id']} no longer in the index")
-            texts.append("")
+            chunks.append({**c, "text": ""})
         else:
-            texts.append(stored["text"])
-    context = "\n\n---\n\n".join(texts)
+            chunks.append(stored)
+    context = render_context(version, chunks)
     return template.format(context=context, question=trace["query"]), missing
 
 
