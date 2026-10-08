@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 from typing import List, Dict, Any
@@ -48,6 +49,17 @@ class ChunkStore:
     def delete_document(self, document_id: str):
         self._chunks = [c for c in self.chunks if c["document_id"] != document_id]
         self._save()
+
+    def fingerprint(self) -> str:
+        """Identifies the index a trace was served from, so a replay can detect reindexing."""
+        h = hashlib.sha256()
+        for c in self.chunks:
+            h.update(c["chunk_id"].encode("utf-8"))
+            h.update(c["text"].encode("utf-8"))
+        return f"{len(self.chunks)}-{h.hexdigest()[:12]}"
+
+    def get(self, chunk_id: str) -> Dict[str, Any] | None:
+        return next((c for c in self.chunks if c["chunk_id"] == chunk_id), None)
 
     def dense_search(self, query_embedding: List[float], limit: int = 5) -> List[Dict[str, Any]]:
         if not self.chunks:

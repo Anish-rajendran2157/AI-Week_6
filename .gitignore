@@ -1,3 +1,5 @@
 .env
 __pycache__/
 *.pyc
+# a roster of employee names is itself personal data
+data/name_roster.txt

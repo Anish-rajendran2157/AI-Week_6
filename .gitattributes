@@ -1,0 +1,2 @@
+# keep LF so the corpus, chunk-store fingerprint and prompt sha256 are byte-stable across checkouts
+* text=auto eol=lf
